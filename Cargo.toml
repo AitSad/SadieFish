@@ -2,6 +2,7 @@
 name = "SadieFish"
 version = "0.1.0"
 edition = "2023"
+description = "A Rust cryptography library for educational purposes"
 
 [dependencies]
 rand = "0.8.4"
