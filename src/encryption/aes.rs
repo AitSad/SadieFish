@@ -1,5 +1,4 @@
 use aes::Aes256;
-use aes::block_cipher_trait::BlockCipher;
 use aes::cipher::KeyInit;
 use aes::cipher::BlockEncrypt;
 use aes::cipher::BlockDecrypt;
