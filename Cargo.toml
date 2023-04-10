@@ -12,14 +12,15 @@ aes = "0.9.0"
 doc-comment = "0.3.3"
 
 [features]
-default = []
-caesar = ["SadieFish/encryption/caesar"]
-vigenere = ["SadieFish/encryption/vigenere"]
-aes = ["SadieFish/encryption/aes"]
-des = ["SadieFish/encryption/des"]
-base64 = ["SadieFish/utils/base64"]
-hex = ["SadieFish/utils/hex"]
-rand = ["SadieFish/src/utils/rand"]
+default = ["SadieFish_encryption"]
+caesar = ["SadieFish_encryption_caesar"]
+vigenere = ["SadieFish_encryption_vigenere"]
+SadieFish_encryption_aes = ["SadieFish_encryption/aes"]
+SadieFish_encryption_des = ["SadieFish_encryption/des"]
+SadieFish_encryption_rsa = ["SadieFish_encryption/rsa"]
+base64 = ["SadieFish_utils/base64"]
+hex = ["SadieFish_utils/hex"]
+rand = ["SadieFish_utils/rand"]
 
 [workspace]
 
