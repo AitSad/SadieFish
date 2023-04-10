@@ -1,0 +1,26 @@
+[package]
+name = "SadieFish"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+rand = "0.8.4"
+
+[dev-dependencies]
+doc-comment = "0.3.3"
+
+[features]
+default = []
+caesar = ["SadieFish/encryption/caesar"]
+vigenere = ["SadieFish/encryption/vigenere"]
+aes = ["SadieFish/encryption/aes"]
+des = ["SadieFish/encryption/des"]
+rsa = ["SadieFish/encryption/rsa"]
+base64 = ["SadieFish/utils/base64"]
+hex = ["SadieFish/utils/hex"]
+bit_ops = ["SadieFish/utils/bit_ops"]
+
+[workspace]
+
+[build-dependencies]
+sadiefish = { path = "." }
