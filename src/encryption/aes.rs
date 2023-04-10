@@ -1,5 +1,6 @@
 use aes::Aes256;
 use aes::block_cipher_trait::BlockCipher;
+use aes::cipher::KeyInit;
 
 pub fn aes_encrypt(key: &[u8], plaintext: &[u8]) -> Vec<u8> {
     let cipher = Aes256::new(key);
