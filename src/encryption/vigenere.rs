@@ -7,7 +7,7 @@ pub fn encrypt(plaintext: &str, key: &str) -> String {
 
     for &byte in plaintext_bytes {
         let key_byte = key_bytes[key_index % key_bytes.len()];
-        let cipher_byte = (byte + key_byte) % 256;
+        let cipher_byte = (byte + key_byte) % u8::MAX + 1;
         ciphertext.push(cipher_byte as char);
         key_index += 1;
     }
@@ -24,7 +24,7 @@ pub fn decrypt(ciphertext: &str, key: &str) -> String {
 
     for &byte in ciphertext_bytes {
         let key_byte = key_bytes[key_index % key_bytes.len()];
-        let plain_byte = (byte + 256 - key_byte) % 256;
+        let plain_byte = (byte + u8::MAX + 1 - key_byte) % u8::MAX + 1;
         plaintext.push(plain_byte as char);
         key_index += 1;
     }
