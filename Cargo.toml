@@ -26,6 +26,3 @@ hex = ["SadieFish_utils/hex"]
 rand = ["SadieFish_utils/rand"]
 
 [workspace]
-
-[build-dependencies]
-sadiefish = { path = "." }
