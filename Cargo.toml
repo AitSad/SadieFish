@@ -1,6 +1,7 @@
 [package]
 name = "SadieFish"
 version = "0.1.1"
+authors = ["Aitzaz Imtiaz <aitzazimtiaz855@gmail.com>"]
 edition = "2018"
 description = "A Rust cryptography library for educational purposes"
 
