@@ -10,7 +10,7 @@ license = "MIT"
 
 [dependencies]
 rand = "0.8.4"
-aes = "0.9.0"
+aes = "0.8.2"
 
 [dev-dependencies]
 winit = "0.22"
