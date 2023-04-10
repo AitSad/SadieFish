@@ -6,7 +6,7 @@ description = "A Rust cryptography library for educational purposes"
 
 [dependencies]
 SadieFish_encryption = { version = "0.1.1", features = ["aes"] }
-SadieFish_util = { version = "0.1.1", features = ["base64"] }
+SadieFish_utils = { version = "0.1.1", features = ["base64"] }
 rand = "0.8.4"
 aes = "0.9.0"
 
