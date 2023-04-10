@@ -21,10 +21,10 @@ pub use SadieFish_encryption::*;
 
 // Declare features for the various encryption algorithms and utilities
 #[cfg(not(test))] // Only include this section in non-test builds
-#[cfg(any(feature = "caesar", feature = "vigenere", feature = "aes", feature = "des", feature = "rsa"))]
+#[cfg(any(feature = "caesar", feature = "vigenere"))]
 #[cfg(not(feature = "default"))]
 pub use SadieFish_encryption::*;
 
 #[cfg(not(test))] // Only include this section in non-test builds
-#[cfg(any(feature = "base64", feature = "hex", feature = "rand"))]
+#[cfg(any(feature = "hex")]
 pub use SadieFish_utils::*;
