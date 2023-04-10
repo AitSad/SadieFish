@@ -19,6 +19,7 @@ aes = ["SadieFish/encryption/aes"]
 des = ["SadieFish/encryption/des"]
 base64 = ["SadieFish/utils/base64"]
 hex = ["SadieFish/utils/hex"]
+rand = ["SadieFish/src/utils/rand"]
 
 [workspace]
 
