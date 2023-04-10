@@ -26,5 +26,5 @@ pub use SadieFish_encryption::*;
 pub use SadieFish_encryption::*;
 
 #[cfg(not(test))] // Only include this section in non-test builds
-#[cfg(any(feature = "base64", feature = "hex", feature = "bit_ops"))]
+#[cfg(any(feature = "base64", feature = "hex", feature = "rand"))]
 pub use SadieFish_utils::*;
