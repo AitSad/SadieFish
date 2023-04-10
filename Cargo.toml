@@ -2,24 +2,20 @@
 name = "SadieFish"
 version = "0.1.1"
 authors = ["Aitzaz Imtiaz <aitzazimtiaz855@gmail.com>"]
+repository = "https://github.com/AitSad/SadieFish"
 edition = "2018"
 description = "A Rust cryptography library for educational purposes"
+readme = "README.md"
+license = "MIT"
 
 [dependencies]
-SadieFish_encryption = { version = "0.1.1", optional = true, features = ["aes", "des", "caesar", "vigenere"] }
-SadieFish_utils = { version = "0.1.1", optional = true, features = ["base64", "hex", "rand"] }
 rand = "0.8.4"
 aes = "0.9.0"
 
-[features]
-default = ["SadieFish_encryption"]
-caesar = ["SadieFish_encryption/caesar"]
-vigenere = ["SadieFish_encryption/vigenere"]
-SadieFish_encryption_aes = ["SadieFish_encryption/aes"]
-SadieFish_encryption_des = ["SadieFish_encryption/des"]
-SadieFish_encryption_rsa = ["SadieFish_encryption/rsa"]
-base64 = ["SadieFish_utils/base64"]
-hex = ["SadieFish_utils/hex"]
-rand = ["SadieFish_utils/rand"]
+[dev-dependencies]
+winit = "0.22"
+
+[build-dependencies]
+shaderc = "0.6.2"
 
 [workspace]
