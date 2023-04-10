@@ -1,23 +1,25 @@
 use aes::Aes256;
 use aes::block_cipher_trait::BlockCipher;
 use aes::cipher::KeyInit;
+use aes::cipher::BlockEncrypt;
+use aes::cipher::BlockDecrypt;
 
 pub fn aes_encrypt(key: &[u8], plaintext: &[u8]) -> Vec<u8> {
-    let cipher = Aes256::new(key);
+    let cipher = Aes256::new(key.into());
     let mut ciphertext = plaintext.to_vec();
     cipher.encrypt_block(&mut ciphertext);
     ciphertext
 }
 
 pub fn aes_decrypt(key: &[u8], ciphertext: &[u8]) -> Vec<u8> {
-    let cipher = Aes256::new(key);
+    let cipher = Aes256::new(key.into());
     let mut plaintext = ciphertext.to_vec();
     cipher.decrypt_block(&mut plaintext);
     plaintext
 }
 
 pub fn aes_cbc_encrypt(key: &[u8], iv: &[u8], plaintext: &[u8]) -> Vec<u8> {
-    let cipher = Aes256::new(key);
+    let cipher = Aes256::new(key.into());
     let mut ciphertext = plaintext.to_vec();
     let mut prev_block = iv.to_vec();
     for block in ciphertext.chunks_mut(16) {
@@ -31,7 +33,7 @@ pub fn aes_cbc_encrypt(key: &[u8], iv: &[u8], plaintext: &[u8]) -> Vec<u8> {
 }
 
 pub fn aes_cbc_decrypt(key: &[u8], iv: &[u8], ciphertext: &[u8]) -> Vec<u8> {
-    let cipher = Aes256::new(key);
+    let cipher = Aes256::new(key.into());
     let mut plaintext = ciphertext.to_vec();
     let mut prev_block = iv.to_vec();
     for block in plaintext.chunks_mut(16) {
@@ -46,7 +48,7 @@ pub fn aes_cbc_decrypt(key: &[u8], iv: &[u8], ciphertext: &[u8]) -> Vec<u8> {
 }
 
 pub fn aes_ctr(key: &[u8], nonce: &[u8], plaintext: &[u8]) -> Vec<u8> {
-    let cipher = Aes256::new(key);
+    let cipher = Aes256::new(key.into());
     let mut counter = nonce.to_vec();
     let mut ciphertext = Vec::new();
     for (i, block) in plaintext.chunks(16).enumerate() {
