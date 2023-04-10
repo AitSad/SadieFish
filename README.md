@@ -6,9 +6,9 @@ SadieFish is a cryptography library written in Rust. It provides a set of encryp
 
 - Caesar cipher
 - Vigenère cipher
-- Advanced Encryption Standard (AES)
-- Data Encryption Standard (DES)
-- Base64 encoding/decoding
+- Advanced Encryption Standard (AES) [Pending]
+- Data Encryption Standard (DES) [Pending]
+- Base64 encoding/decoding [Pending]
 - Hexadecimal encoding/decoding
 
 ## Installation
@@ -24,8 +24,8 @@ SadieFish = { git = "https://github.com/AitSad/SadieFish" }
 To use SadieFish in your Rust code, import the necessary modules:
 
 ```rust
-use SadieFish::encryption::{caesar, vigenere, aes, des, rsa};
-use SadieFish::utils::{base64, hex, rand};
+use SadieFish::encryption::{caesar, vigenere};
+use SadieFish::utils::{hex};
 ```
 
 Then, call the desired encryption or utility function. For example, to encrypt a message using the Caesar cipher:
