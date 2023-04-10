@@ -15,7 +15,7 @@ doc-comment = "0.3.3"
 
 [features]
 default = ["SadieFish_encryption"]
-caesar = ["SadieFish_encryption'caesar"]
+caesar = ["SadieFish_encryption/caesar"]
 vigenere = ["SadieFish_encryption/vigenere"]
 SadieFish_encryption_aes = ["SadieFish_encryption/aes"]
 SadieFish_encryption_des = ["SadieFish_encryption/des"]
