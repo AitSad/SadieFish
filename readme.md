@@ -8,10 +8,8 @@ SadieFish is a cryptography library written in Rust. It provides a set of encryp
 - Vigenère cipher
 - Advanced Encryption Standard (AES)
 - Data Encryption Standard (DES)
-- Rivest–Shamir–Adleman (RSA)
 - Base64 encoding/decoding
 - Hexadecimal encoding/decoding
-- Random number generation
 
 ## Installation
 
