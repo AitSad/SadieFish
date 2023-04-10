@@ -17,10 +17,8 @@ caesar = ["SadieFish/encryption/caesar"]
 vigenere = ["SadieFish/encryption/vigenere"]
 aes = ["SadieFish/encryption/aes"]
 des = ["SadieFish/encryption/des"]
-rsa = ["SadieFish/encryption/rsa"]
 base64 = ["SadieFish/utils/base64"]
 hex = ["SadieFish/utils/hex"]
-bit_ops = ["SadieFish/utils/bit_ops"]
 
 [workspace]
 
